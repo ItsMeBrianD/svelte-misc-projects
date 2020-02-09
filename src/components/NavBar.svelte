@@ -7,6 +7,7 @@
         <Link to="/"><span class="link">Home</span></Link>
         <Link to="/todo"><span class="link">Todo List</span></Link>
         <Link to="/state"><span class="link">State Example</span></Link>
+        <Link to="/store"><span class="link">Store Example</span></Link>
     </nav>
 </Router>
 
