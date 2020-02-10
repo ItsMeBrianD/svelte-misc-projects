@@ -1,17 +1,19 @@
 <script>
     import SvelteLogo from "../components/SvelteLogo.svelte";
-    import {fade} from 'svelte/transition';
+    import Container from "../components/Container.svelte";
 </script>
-<div transition:fade>
-    <SvelteLogo/>
-    <h1>Brian's Svelte Misc Projects</h1>
-</div>
-
+<Container>
+    <div>
+        <SvelteLogo/>
+        <h1>Brian's Svelte Misc Projects</h1>
+    </div>
+</Container>
 <style>
-    div{
-        text-align:center;
+    div {
+        text-align: center;
     }
-    h1{
-        font-weight:lighter;
+
+    h1 {
+        font-weight: lighter;
     }
 </style>

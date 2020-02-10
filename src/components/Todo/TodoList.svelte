@@ -7,8 +7,8 @@
     let items;
     const unsubscribe = todo_items.subscribe(v=>items=v);
 </script>
-<div class="container">
 
+<div class="container">
     <div class="sublist">
         <h2>
             Incomplete items
@@ -45,6 +45,7 @@
         display: flex;
         width:100%;
         justify-content:space-around;
+        margin:2em auto 0;
     }
     div.sublist{
         text-align:center;
@@ -61,5 +62,6 @@
     }
     hr{
         width:80%;
+        margin:0 auto;
     }
 </style>
