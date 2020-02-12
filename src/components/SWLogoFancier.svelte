@@ -1,19 +1,20 @@
 <script>
     import {fade, draw, fly} from 'svelte/transition';
-    import {circIn, circOut} from 'svelte/easing';
+    import { cubicInOut } from 'svelte/easing';
     import {text_paths} from '../svg/SWLogo_Paths';
 
     const options = {
         prefill: {
             fill: {
-                delay: 600,
+                delay: 500,
                 duration:1000
             }
         },
         background: {
             fill: {
                 delay: 1500,
-                duration: 400
+                duration: 400,
+                easing:cubicInOut
             },
             stroke: {
                 delay: 1100,
@@ -26,8 +27,14 @@
                 duration: 800
             },
             stroke: {
-                delay: 1900,
-                duration: 1200
+                delay: 1200,
+                duration: 1800
+            }
+        },
+        text: {
+            stroke: {
+                delay: 1400,
+                duration: 1500
             }
         }
     };
@@ -68,11 +75,11 @@
                   d="M37.38,95.59l155.11-33.83L63.53,188.17l-2.13-1.96l23.33-65.42L37.38,95.59z"/>
             <path id="__sw_leg_stroke" class="white-stroke" in:draw={options.parts.stroke}
                   d="M143.9,123.93l24.18,75.96l-46.9-53.28v-0.65L143.9,123.93z"/>
-            <path id="__sw_surround_stroke" class="black-stroke" in:draw={options.parts.stroke}
+            <path id="__sw_surround_stroke" class="black-stroke" in:draw={options.text.stroke}
                   d="M51.41,199.89C29.53,179.92,15.8,151.16,15.8,119.2C15.8,58.89,64.69,10,125,10s109.2,48.89,109.2,109.2 c0,31.96-13.73,60.71-35.61,80.68"/>
             <!-- Text Compound Path, may need to be split into letters -->
             {#each text_paths as path, i}
-                <path class="black-stroke" in:draw={{delay:(options.parts.stroke.delay + (i*150)), duration:options.parts.stroke.duration}} d="{path}" />
+                <path class="black-stroke" in:draw={{delay:(options.text.stroke.delay + (i*100)), duration:options.text.stroke.duration}} d="{path}" />
             {/each}
         </g>
     </svg>
