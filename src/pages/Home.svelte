@@ -1,10 +1,11 @@
 <script>
     import SvelteLogo from "../components/SvelteLogo.svelte";
     import Container from "../components/Container.svelte";
+    import SWLogo from "../components/SWLogo.svelte";
 </script>
 <Container>
     <div>
-        <SvelteLogo/>
+        <SWLogo/>
         <h1>Brian's Svelte Misc Projects</h1>
     </div>
 </Container>

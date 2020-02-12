@@ -8,6 +8,8 @@
         <Link to="/todo"><span class="link">Todo List</span></Link>
         <Link to="/state"><span class="link">State Example</span></Link>
         <Link to="/store"><span class="link">Store Example</span></Link>
+        <Link to="/dynamicstate"><span class="link">Dynamic State Example</span></Link>
+	<Link to="/componentExamples"><span class="link">Component Examples</span></Link>
     </nav>
 </Router>
 
